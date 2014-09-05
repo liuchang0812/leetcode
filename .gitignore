@@ -54,3 +54,4 @@ docs/_build/
 
 *.out*
 *.swp
+*.o
