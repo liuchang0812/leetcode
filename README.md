@@ -1,4 +1,4 @@
 leetcode
 ========
 
-just for fun.
+每天至少做一题吧，多写写代码
