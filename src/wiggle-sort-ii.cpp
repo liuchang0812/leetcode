@@ -1,25 +1,16 @@
-#include <vector>
-#include <iostream>
-using namespace std;
-
-class Solution{
+class Solution {
 public:
-    void WiggleSort(vector<int>& nums)
-    {
+    void wiggleSort(vector<int>& nums) {
         vector<int> dummy(nums);
         sort(dummy.begin(), dummy.end());
-
-        for (size_t i=0; i<nums.size(); i++)
+        int len = (nums.size() + 1) / 2;
+        
+        for (int i=0; i<len; ++i)
+            nums[i*2] = dummy[len - i - 1];
+        
+        for (int i=0; i<nums.size() - len; ++i)
         {
-            static int len = nums.size();
-            if (i&1)
-            {
-                nums[i] = dummy[len/2 + i/2];
-            }
-            else
-            {
-                nums[i] = dummy[i>>1];
-            }
+            nums[i*2 + 1] = dummy[nums.size() - i - 1];
         }
     }
 };
