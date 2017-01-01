@@ -40,7 +40,6 @@ public:
 	    for (int k=n; k>=0; --k)
 	    {
 	      int maxv = 0;
-	      // yao
 	      if (j >= cnt0[i] && k >= cnt1[i])
 	      {
 		maxv = f[j-cnt0[i]][k-cnt1[i]] + 1; 
